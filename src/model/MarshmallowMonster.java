@@ -8,6 +8,7 @@ public class MarshmallowMonster
 	private int eyeCount;
 	private boolean hasNoses;
 	private int armCount;
+	private String said;
 	
 	public MarshmallowMonster()
 	{
@@ -21,13 +22,14 @@ public class MarshmallowMonster
 		//Assigns name to this name which talks to the current object 
 	}
 	
-	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNoses, int armCount)
+	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNoses, int armCount, String said)
 	{
 		this.name = name;
 		this.legCount = legCount;
 		this.eyeCount = eyeCount;
 		this.hasNoses = hasNoses;
 		this.armCount = armCount;
+		this.said = said;
 		//have to assign the variables
 	}
 	
@@ -56,6 +58,11 @@ public class MarshmallowMonster
 		return armCount;
 	}
 	
+	public String getSaid()
+	{
+		return said;
+	}
+	
 	public void setName(String name)
 	{
 		this.name = name;
@@ -81,7 +88,10 @@ public class MarshmallowMonster
 		this.armCount = armCount;
 	}
 	
-	
+	public void setSaid(String said)
+	{
+		this.said = said;
+	}
 	
 	public String toString()
 	{
