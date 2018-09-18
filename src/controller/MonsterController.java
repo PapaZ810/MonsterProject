@@ -7,14 +7,14 @@ import javax.swing.JOptionPane;
 public class MonsterController
 {
 	//Data member section or declaration section
-	private MarshmallowMonster myMonster;
+	//private MarshmallowMonster myMonster;
 	private MarshmallowMonster userMonster;
 	private Scanner inputScanner;
 	
 	//Constructors initialize data members
 	public MonsterController()
 	{
-		myMonster = new MarshmallowMonster("Big Smoke", .5, 2, false, 1, "Shure Microphones");
+		//myMonster = new MarshmallowMonster("Big Smoke", .5, 2, false, 1, "Shure Microphones");
 		userMonster = new MarshmallowMonster();
 		inputScanner = new Scanner(System.in);
 	}
@@ -23,11 +23,11 @@ public class MonsterController
 	{
 		//JOptionPane.showMessageDialog(null,myMonster);
 		
-		System.out.println(myMonster);
+		//System.out.println(myMonster);
 		
 		//System.out.println("How many legs do you want your monster to have?");
 		//JOptionPane.showMessageDialog(null, "How many \nlegs do you want your monster to have?");
-		String userInput = JOptionPane.showInputDialog(null, "How many legs do you want yourmonster to have?");
+		String userInput = JOptionPane.showInputDialog(null, "How many legs do you want your monster to have?");
 		double legCount = -99;
 		if (validDouble(userInput))
 		{
@@ -79,7 +79,7 @@ public class MonsterController
 		
 		//System.out.println("Your monster has " + userMonster.getLegCount() + " legs and " + userMonster.getArmCount() +  " arms! Your monster has a " + userMonster.getHasNoses() + " nose and " + userMonster.getEyeCount() + " eyes! Your monster's name is " + userMonster.getName() + " and he says " + userMonster.getSaid() + "! Isn't that just so precious!");
 		
-		JOptionPane.showMessageDialog(null, "Your monster has " + userMonster.getLegCount() + " legs and " + userMonster.getArmCount() +  " arms! \nYour monster has a " + userMonster.getHasNoses() + " nose and " + userMonster.getEyeCount() + " eyes! \nYour monster's name is " + userMonster.getName() + " and he says " + userMonster.getSaid() + "! Isn't that just so precious!");
+		JOptionPane.showMessageDialog(null, "Your monster has " + userMonster.getLegCount() + " legs and " + userMonster.getArmCount() +  " arms! \nYour monster has a " + userMonster.getHasNoses() + " nose and " + userMonster.getEyeCount() + " eyes! \nYour monster's name is " + userMonster.getName() + " and he says " + userMonster.getSaid() + "! \nIsn't that just so precious!");
 		
 		inputScanner.close();
 	}
@@ -97,7 +97,7 @@ public class MonsterController
 				{
 					JOptionPane.showMessageDialog(null, "You need to type in a whole number!");
 				}
-				return true;
+				return isValid;
 			}
 			
 			public boolean validDouble(String mightBeDouble)
@@ -113,7 +113,7 @@ public class MonsterController
 				{
 					JOptionPane.showMessageDialog(null,	"You need to type in a rational number");
 				}
-				return true;
+				return isValid;
 			}
 			
 			
